@@ -21,7 +21,7 @@ const bouquetFiles = [
 
 // 3. Случайный букет
 const randomFile = bouquetFiles[Math.floor(Math.random() * bouquetFiles.length)];
-const bouquetUrl = computed(() => `/bouquets/${randomFile}`);
+const bouquetUrl = computed(() => `bouquets/${randomFile}`);
 
 // Логика получения имени и выбора стиха
 onMounted(async () => {
@@ -31,7 +31,7 @@ onMounted(async () => {
 
   if (token) {
     try {
-      const response = await fetch('/users.json');
+      const response = await fetch('users.json');
       const users: UserConfig = await response.json();
       if (users[token]) {
         userName.value = users[token];
