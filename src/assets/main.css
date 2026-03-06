@@ -1,0 +1,58 @@
+:root {
+  --primary-pink: #ffb7c5;
+  --soft-white: #fff5f7;
+  --soft-green: #e2f0cb;
+  --text-dark: #4a4a4a;
+  --accent-pink: #ff8fa3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--soft-white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-in-enter-from,
+.fade-in-leave-to {
+  opacity: 0;
+}
+
+.btn-primary {
+  background-color: var(--primary-pink);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 183, 197, 0.4);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(255, 183, 197, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-pink);
+}
