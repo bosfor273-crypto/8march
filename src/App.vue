@@ -6,12 +6,11 @@ import type { Poem, UserConfig } from './types';
 
 // Состояние
 const randomIndex = Math.floor(Math.random() * poems.length);
-const currentPoem = ref<Poem | null>(poems[randomIndex]);
+const currentPoem = ref<Poem | null>(poems[randomIndex] as Poem | null);
 const userName = ref<string>('Прекрасная Дама');
 const isButtonVisible = ref(true);
 const isBouquetVisible = ref(false);
 const isCelebrating = ref(false);
-const bouquetIndex = ref(1);
 
 // Список файлов букетов (автоматически обновляется)
 const bouquetFiles = [
